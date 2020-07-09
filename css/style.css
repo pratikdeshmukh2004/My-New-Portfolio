@@ -1,0 +1,80 @@
+.afterload{
+  display: none;
+}
+.cool-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #f56565;
+  transition: width .3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+}
+html{
+  scroll-behavior: smooth;
+}
+.social{
+  position: fixed;
+  right: 90px;
+  top: 50%;
+  transform: rotateY(-50%);
+  z-index: 9999;
+  transition: 2s ease;
+}
+.social ul li{
+  list-style: none;
+  font-size: 22px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.social ul li a{
+  color: #000;
+}
+.fa-instagram {
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.social ul li:nth-child(1) a{
+  color: #3b5999;
+}
+.social ul li:nth-child(3) a{
+  color: #0077b5;
+}
+.social ul li:nth-child(4) a{
+  color: #fe0000;
+}
+.social ul li:nth-child(5) a{
+  color: #000;
+}
+
+@media screen and (max-width: 992.98px){
+  .social{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+  }
+
+  .social ul{
+    display: flex;
+    justify-content: center;
+  }
+
+  .social ul li{
+    margin-right: 30px;
+  }
+}
