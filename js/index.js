@@ -172,3 +172,6 @@ $(function () {
   };
   scrolltotop.init();
 });
+function oncontact() {
+  alert("Sory.I am working on this future.")
+}
